@@ -48,3 +48,16 @@ product:
     visibility: private
     status: draft
     type: derived data
+
+## 9. Product Strategy Definition
+- productStrategy is always initially minimal when created the first time
+  - one business KPI
+  - one product KPI
+- Product KPIs (productKPIs) are NEVER about data quality
+- Product KPIs measure outputs that support the outcome defined in contributesToKPI
+- Data quality metrics belong in the separate dataQuality section
+- Product KPIs should focus when possible on:
+  - Adoption and usage metrics
+  - Integration success
+  - Business value delivery
+- Each product KPI must clearly link to how it supports the business KPI in contributesToKPI

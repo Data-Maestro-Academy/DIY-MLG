@@ -8,9 +8,26 @@ product:
       visibility: public
       status: draft
       type: dataset
-    fi:
-      name: Lentoaikataulut Abu Dhabin lentoasema
-      productID: flight-schedules-abudhabi
-      visibility: public
-      status: draft
-      type: dataset
+  productStrategy:
+    contributesToKPI:
+      id: csat-001
+      name: Customer Satisfaction Score
+      description: Overall customer satisfaction with airport services
+      unit: percentage
+      target: 85
+      direction: increase
+      timeframe: Q4 2025
+      frequency: monthly
+      owner: Customer Experience Team
+      calculation: Average satisfaction rating from customer surveys
+    productKPIs:
+      - id: api-integrations-001
+        name: Active API Integrations
+        description: Number of active third-party systems consuming flight schedule data via API
+        unit: count
+        target: 10
+        direction: increase
+        timeframe: Q4 2025
+        frequency: monthly
+        owner: Product Team
+        calculation: Count of unique API consumers with at least one successful request in the past 30 days
