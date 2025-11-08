@@ -4,6 +4,7 @@
 - Use local schema only: "../ODPS4.1/schema/odps.json"
 - No remote URLs
 - Reject any field not defined in the schema
+- Verify results you generate agains the given Schema
 
 ## 2. File Format
 - YAML only
@@ -61,3 +62,6 @@ product:
   - Integration success
   - Business value delivery
 - Each product KPI must clearly link to how it supports the business KPI in contributesToKPI
+
+## 10. Data Contracts
+- By default unless otherwise ordered, always add data contract to the data product with $ref syntax and refer to existing data product in the data-contracts folder. 

@@ -8,6 +8,8 @@ product:
       visibility: public
       status: draft
       type: dataset
+  dataContract:
+    $ref: ../data-contracts/contract-flight-schedules-abudhabi.yml
   productStrategy:
     contributesToKPI:
       id: csat-001

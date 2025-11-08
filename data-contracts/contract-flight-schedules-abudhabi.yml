@@ -1,0 +1,42 @@
+apiVersion: v3.0.2
+kind: DataContract
+
+id: flight-schedules-abudhabi-001
+version: 1.0.0
+status: draft
+
+name: Flight Schedules Abu Dhabi Airport Data Contract
+domain: airport-operations
+dataProduct: flight-schedules-abudhabi
+
+description:
+  purpose: Provide scheduled flight arrival and departure data for Abu Dhabi Airport for internal analytics and dashboard use.
+  limitations: Data may contain provisional schedules; external redistribution is not permitted.
+  usage: Consumer may access via authorised API endpoint; reuse limited to approved internal projects.
+
+schema:
+  - name: flight_schedules
+    logicalType: object
+    physicalType: table
+    description: Scheduled flights at Abu Dhabi Airport (AD-X).
+    properties:
+      - name: flight_id
+        description: Unique flight identifier.
+        logicalType: string
+        physicalType: text
+      - name: scheduled_departure
+        description: Scheduled departure date/time.
+        logicalType: dateTime
+        physicalType: timestamp
+      - name: scheduled_arrival
+        description: Scheduled arrival date/time.
+        logicalType: dateTime
+        physicalType: timestamp
+      - name: origin_airport
+        description: Origin airport ICAO/IATA code.
+        logicalType: string
+        physicalType: text
+      - name: destination_airport
+        description: Destination airport ICAO/IATA code.
+        logicalType: string
+        physicalType: text

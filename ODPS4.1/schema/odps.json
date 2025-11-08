@@ -242,6 +242,11 @@
             "type": "object",
             "description": "Binds together data contract details.",
             "properties": {
+                "$ref": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "Points to the contract content, local file or online. You can use this or then the other described approaches to define elements of the contract."
+                },
                 "id": {
                     "type": "string",
                     "description": "UUID of the data contract"
