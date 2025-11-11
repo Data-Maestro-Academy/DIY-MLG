@@ -1,4 +1,4 @@
-<img width="3840" height="1140" alt="image" src="https://github.com/user-attachments/assets/59a3542c-465f-4ab2-8bb3-07effd80e704" /># DIY Minimum Lovable Governance (MLG) – GitHub-Managed Data Product Governance with Claude in VS Code
+# DIY Minimum Lovable Governance (MLG) – GitHub-Managed Data Product Governance with Claude in VS Code
 
 Learn how to build an AI-assisted, GitHub-governed data product governance model using the Open Data Product Specification (ODPS). This setup shows how Claude in VS Code can generate, validate, and refine ODPS-compliant YAML specs using local schemas and soft guardrails.
 
