@@ -21,7 +21,15 @@ Each week adds a new building block:
 * Quickbite path for DIY MLG framework (Strategy, Contracts, DQ, SLA, Access, Pricing, Licensing)
 
 Built and documented by Dr. Jarkko Moilanen, creator of ODPS and the Minimum Lovable Governance model for data products.
-
 🎓 Learn the source code of governance before you automate it.
 
-📺 Watch the Quickbite videos and explore more at DataMaestro.Academy
+## Get Certified in Minimum Lovable Governance
+
+Built and documented by Dr. Jarkko Moilanen, creator of ODPS and the Minimum Lovable Governance model for data products.
+The Minimum Lovable Governance Masterclass takes you beyond the QuickBites. It provides:
+
+* Full walkthrough of all MLG components (Strategy, Contracts, DQ, SLA, Access, Pricing, Licensing)
+* Real-world examples and reusable templates
+* Official Data Maestro Academy certification recognized by global partners like Alation in their 10,000 Data Product Managers program
+
+**Enroll today:** [Minimum Lovable Governance Masterclass in Udemy](https://www.udemy.com/course/data-products-minimum-lovable-governance-masterclass/?referralCode=3A5188B67577CFBC0B18)
