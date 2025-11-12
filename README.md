@@ -2,6 +2,8 @@
 
 Learn how to build an AI-assisted, GitHub-governed data product governance model using the Open Data Product Specification (ODPS). This setup shows how Claude in VS Code can generate, validate, and refine ODPS-compliant YAML specs using local schemas and soft guardrails.
 
+![DIY Minimum Lovable Governance Cover](cover.png)
+
 Each week adds a new building block:
 * Week 1 – [Setup & Minimal Data Product (Claude + ODPS schema)](https://www.youtube.com/watch?v=h4VXAHImTjQ)
 * Week 2 – [Product Strategy (value, KPIs, alignment)](https://www.youtube.com/watch?v=FZSu_0OfI_U)
