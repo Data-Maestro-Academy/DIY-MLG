@@ -65,3 +65,29 @@ product:
 
 ## 10. Data Contracts
 - By default unless otherwise ordered, always add data contract to the data product with $ref syntax and refer to existing data product in the data-contracts folder. 
+
+## 11. Using Data Quality Profiles
+
+Objective:
+* Ensure all data products apply standardized and reusable data quality definitions.
+
+Instructions:
+
+* When adding a dataQuality element to a data product, always look in the DQ/ folder for available profiles.
+
+* Profiles (e.g., default, premium) are defined in YAML files inside DQ/.
+
+* In the data product file define the dataQuality element and under it include a $ref pointing to the selected profile.
+
+* By default, use the default profile unless otherwise specified.
+
+* In this company, inline data quality definitions are not allowed. Every data product must use $ref to reference an existing profile from DQ/.
+
+Example:
+
+dataQuality:
+  $ref: "../DQ/file.yaml#/xxxx"
+
+Compliance Check:
+
+The $ref must resolve without validation errors against the ODPS 4.1 schema.

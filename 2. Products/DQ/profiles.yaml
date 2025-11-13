@@ -1,0 +1,61 @@
+# Data Quality Profiles
+# This file contains reusable data quality definitions that can be referenced by data products
+# Reference: https://opendataproducts.org/v4.1/
+# Usage in data product:
+#   dataQuality:
+#     $ref: "./DQ/profiles.yaml#/default"
+#   or
+#   dataQuality:
+#     $ref: "./DQ/profiles.yaml#/premium"
+
+default:
+  declarative:
+    - dimension: accuracy
+      displaytitle:
+        - en: Data Accuracy
+      description:
+        - en: Data Accuracy ensures the data product reflects the real-world entities or events it represents, minimizing errors and providing reliable insights.
+      objective: 95
+      unit: percentage
+
+    - dimension: completeness
+      displaytitle:
+        - en: Data Completeness
+      description:
+        - en: Data Completeness measures the extent to which all required data is present and no mandatory fields are missing.
+      objective: 98
+      unit: percentage
+
+    - dimension: timeliness
+      displaytitle:
+        - en: Data Timeliness
+      description:
+        - en: Data Timeliness ensures that data is available when needed and reflects the current state within acceptable time delays.
+      objective: 95
+      unit: percentage
+
+premium:
+  declarative:
+    - dimension: accuracy
+      displaytitle:
+        - en: Premium Data Accuracy
+      description:
+        - en: Premium-tier data accuracy with higher standards for mission-critical applications.
+      objective: 99
+      unit: percentage
+
+    - dimension: completeness
+      displaytitle:
+        - en: Premium Data Completeness
+      description:
+        - en: Premium-tier completeness ensuring near-perfect data availability for all required fields.
+      objective: 99
+      unit: percentage
+
+    - dimension: validity
+      displaytitle:
+        - en: Premium Data Validity
+      description:
+        - en: Premium-tier validity with strict conformance to all defined formats and business rules.
+      objective: 99
+      unit: percentage
