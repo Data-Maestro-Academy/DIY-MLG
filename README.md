@@ -8,7 +8,7 @@ Each week adds a new building block:
 * Week 1 – [Setup & Minimal Data Product (Claude + ODPS schema)](https://www.youtube.com/watch?v=h4VXAHImTjQ)
 * Week 2 – [Product Strategy (value, KPIs, alignment)](https://www.youtube.com/watch?v=FZSu_0OfI_U)
 * Week 3 – [Data Contracts (internal use and reuse)](https://www.youtube.com/watch?v=ZgO-Kc0rKcE)
-* Week 4 – Reusable Data Quality Library (with multiple data products)
+* Week 4 – [Reusable Data Quality Library (with multiple data products)](https://www.youtube.com/watch?v=16Rl02aFekc)
 * Week 5 – Reusable SLA Library
 * Week 6 – Access Profiles Library
 * Week 7 – Pricing & Licensing Blocks
