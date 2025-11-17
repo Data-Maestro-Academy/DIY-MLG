@@ -20,8 +20,6 @@ Each week adds a new building block:
 * VS Code settings for real-time YAML validation
 * Quickbite path for DIY MLG framework (Strategy, Contracts, DQ, SLA, Access, Pricing, Licensing)
 
-Built and documented by Dr. Jarkko Moilanen, creator of ODPS and the Minimum Lovable Governance model for data products.
-🎓 Learn the source code of governance before you automate it.
 
 ## Get Certified in Minimum Lovable Governance
 
