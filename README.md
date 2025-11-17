@@ -9,7 +9,7 @@ Each week adds a new building block:
 * Week 2 – [Product Strategy (value, KPIs, alignment)](https://www.youtube.com/watch?v=FZSu_0OfI_U)
 * Week 3 – [Data Contracts (internal use and reuse)](https://www.youtube.com/watch?v=ZgO-Kc0rKcE)
 * Week 4 – [Reusable Data Quality Library (base for multiple data products)](https://www.youtube.com/watch?v=16Rl02aFekc)
-* Week 5 – Reusable SLA Library
+* Week 5 – [Reusable SLA Library](https://www.youtube.com/watch?v=dh6bhCQvKzM)
 * Week 6 – Access Profiles Library
 * Week 7 – Pricing & Licensing Blocks
 
