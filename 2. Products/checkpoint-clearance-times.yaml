@@ -3,13 +3,13 @@ version: "4.1"
 product:
   details:
     en:
-      name: Flight Schedules Abu Dhabi Airport
-      productID: flight-schedules-abudhabi
+      name: Checkpoint and Security Gate Clearance Times
+      productID: checkpoint-clearance-times
       visibility: public
       status: draft
       type: dataset
   dataContract:
-    $ref: ../data-contracts/contract-flight-schedules-abudhabi.yml
+    $ref: ../data-contracts/contract-checkpoint-clearance-times.yml
   dataQuality:
     $ref: ./DQ/profiles.yaml#/default
   SLA:
@@ -27,13 +27,13 @@ product:
       owner: Customer Experience Team
       calculation: Average satisfaction rating from customer surveys
     productKPIs:
-      - id: api-integrations-001
-        name: Active API Integrations
-        description: Number of active third-party systems consuming flight schedule data via API
+      - id: wait-time-display-adoption-001
+        name: Wait Time Display Adoption
+        description: Number of customer touchpoints actively displaying real-time checkpoint clearance estimates
         unit: count
-        target: 10
+        target: 15
         direction: increase
         timeframe: Q4 2025
         frequency: monthly
         owner: Product Team
-        calculation: Count of unique API consumers with at least one successful request in the past 30 days
+        calculation: Count of active digital displays, mobile apps, and information boards showing checkpoint wait times

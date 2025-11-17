@@ -91,3 +91,29 @@ dataQuality:
 Compliance Check:
 
 The $ref must resolve without validation errors against the ODPS 4.1 schema.
+
+## 12. Using SLA Profiles
+
+Objective:
+* Ensure all data products apply standardized and reusable SLA definitions.
+
+Instructions:
+
+* When adding a SLA element to a data product, always look in the SLA/ folder for available profiles.
+
+* Profiles (e.g., default, premium, etc) are defined in YAML files inside SLA/.
+
+* In the data product file define the SLA element and under it include a $ref pointing to the selected profile.
+
+* By default, use the default profile unless otherwise specified.
+
+* In this company, inline SLA definitions are not allowed. Every data product must use $ref to reference an existing profile from SLA/.
+
+Example:
+
+SLA:
+  $ref: "./SLA/profiles.yaml#/default"
+
+Compliance Check:
+
+The $ref must resolve without validation errors against the ODPS 4.1 schema.

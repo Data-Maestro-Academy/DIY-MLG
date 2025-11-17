@@ -1,0 +1,54 @@
+apiVersion: v3.0.2
+kind: DataContract
+
+id: checkpoint-clearance-times-001
+version: 1.0.0
+status: draft
+
+name: Checkpoint and Security Gate Clearance Times Data Contract
+domain: airport-operations
+dataProduct: checkpoint-clearance-times
+
+description:
+  purpose: Provide real-time and historical average clearance times for checkpoints and security gates at Abu Dhabi Airport to enable accurate wait time estimates for customers.
+  limitations: Data represents average times and may vary based on peak hours and special circumstances; not a guarantee of individual processing times.
+  usage: Consumer may access via authorised API endpoint for display on airport boards, mobile apps, and customer-facing information systems.
+
+schema:
+  - name: checkpoint_clearance_times
+    logicalType: object
+    physicalType: table
+    description: Average time to clear checkpoints and security gates at Abu Dhabi Airport.
+    properties:
+      - name: checkpoint_id
+        description: Unique identifier for the checkpoint or security gate.
+        logicalType: string
+        physicalType: text
+      - name: checkpoint_name
+        description: Human-readable name of the checkpoint (e.g., "Terminal 1 Security Gate A").
+        logicalType: string
+        physicalType: text
+      - name: checkpoint_type
+        description: Type of checkpoint (e.g., "security", "immigration", "customs").
+        logicalType: string
+        physicalType: text
+      - name: terminal
+        description: Terminal location (e.g., "Terminal 1", "Terminal 2").
+        logicalType: string
+        physicalType: text
+      - name: timestamp
+        description: Timestamp when the measurement was recorded.
+        logicalType: dateTime
+        physicalType: timestamp
+      - name: average_clearance_time_minutes
+        description: Average time in minutes to clear the checkpoint.
+        logicalType: decimal
+        physicalType: float
+      - name: current_queue_length
+        description: Current number of passengers in queue (optional).
+        logicalType: integer
+        physicalType: int
+      - name: confidence_level
+        description: Confidence level of the estimate (e.g., "high", "medium", "low").
+        logicalType: string
+        physicalType: text

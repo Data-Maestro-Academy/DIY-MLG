@@ -1,0 +1,69 @@
+# SLA Profiles
+# This file contains reusable SLA definitions that can be referenced by data products
+# Reference: https://opendataproducts.org/v4.1/
+# Usage in data product:
+#   SLA:
+#     $ref: "./SLA/profiles.yaml#/default"
+#   or
+#   SLA:
+#     $ref: "./SLA/profiles.yaml#/premium"
+
+default:
+  declarative:
+    - dimension: uptime
+      displayTitle:
+        en: System Uptime
+      description:
+        en: Percentage of time the system is operational and available
+      objective: 99
+      unit: percent
+
+    - dimension: responseTime
+      displayTitle:
+        en: API Response Time
+      description:
+        en: Maximum time to process and respond to API requests
+      objective: 500
+      unit: milliseconds
+
+    - dimension: updateFrequency
+      displayTitle:
+        en: Data Update Frequency
+      description:
+        en: How often the data is refreshed
+      objective: 1
+      unit: days
+
+premium:
+  declarative:
+    - dimension: uptime
+      displayTitle:
+        en: Premium System Uptime
+      description:
+        en: Premium-tier uptime guarantee for mission-critical applications
+      objective: 99.9
+      unit: percent
+
+    - dimension: responseTime
+      displayTitle:
+        en: Premium API Response Time
+      description:
+        en: Premium-tier response time for high-performance requirements
+      objective: 200
+      unit: milliseconds
+
+    - dimension: updateFrequency
+      displayTitle:
+        en: Premium Data Update Frequency
+      description:
+        en: Premium-tier data refresh rate
+      objective: 60
+      unit: minutes
+
+    - dimension: errorRate
+      displayTitle:
+        en: Premium Error Rate
+      description:
+        en: Maximum tolerated error rate for premium service
+      objective: 0.1
+      unit: percent
