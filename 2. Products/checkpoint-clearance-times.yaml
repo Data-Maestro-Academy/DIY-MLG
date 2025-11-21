@@ -7,13 +7,19 @@ product:
       productID: checkpoint-clearance-times
       visibility: public
       status: draft
-      type: dataset
+      type: data-driven service
   dataContract:
-    $ref: ../data-contracts/contract-checkpoint-clearance-times.yml
+    $ref: ./data-contracts/contract-checkpoint-clearance-times.yml
   dataQuality:
     $ref: ./DQ/profiles.yaml#/default
   SLA:
     $ref: ./SLA/profiles.yaml#/default
+  dataAccess:
+    default:
+      $ref: ./Access/profiles.yaml#/api
+    agent:
+      $ref: ./Access/profiles.yaml#/agent
+
   productStrategy:
     contributesToKPI:
       id: csat-001

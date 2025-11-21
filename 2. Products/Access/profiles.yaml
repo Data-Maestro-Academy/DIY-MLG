@@ -1,0 +1,59 @@
+# Access Profiles
+# This file contains reusable data access definitions that can be referenced by data products
+# Reference: https://opendataproducts.org/v4.1/
+# Usage in data product:
+#   dataAccess:
+#     $ref: "./Access/profiles.yaml#/default"
+#   or
+#   dataAccess:
+#     $ref: "./Access/profiles.yaml#/api"
+
+default:
+  name:
+    - en: CSV File Download
+  description:
+    - en: Standard file-based access for downloading data products in CSV format
+  outputPortType: file
+  format: CSV
+  authenticationMethod: none
+  accessURL: https://example.com/files/data.csv
+  specsURL: https://example.com/files/csv-specs.txt
+  documentationURL: https://example.com/docs/csv-download-guide.html
+
+file:
+  name:
+    - en: Zipped File Package
+  description:
+    - en: File-based access for downloading data products as compressed ZIP package
+  outputPortType: file
+  format: zip
+  authenticationMethod: none
+  accessURL: https://example.com/files/data.zip
+  specsURL: https://example.com/files/zip-specs.txt
+  documentationURL: https://example.com/docs/file-download-guide.html
+
+api:
+  name:
+    - en: REST API Access
+  description:
+    - en: RESTful API access with JSON response format
+  outputPortType: API
+  format: JSON
+  authenticationMethod: OAuth
+  specification: OAS
+  accessURL: https://example.com/api/v1/data
+  specsURL: https://example.com/api/openapi.json
+  documentationURL: https://example.com/docs/api-reference.html
+
+agent:
+  name:
+    - en: AI Agent Access via MCP
+  description:
+    - en: Model Context Protocol (MCP) access for AI agents and autonomous systems
+  outputPortType: AI
+  format: MCP
+  authenticationMethod: Token
+  specification: MCP
+  accessURL: https://example.com/mcp/server
+  specsURL: https://example.com/mcp/llms.txt
+  documentationURL: https://example.com/docs/mcp-agent-guide.html

@@ -117,3 +117,80 @@ SLA:
 Compliance Check:
 
 The $ref must resolve without validation errors against the ODPS 4.1 schema.
+
+## 13. Using Data Access Profiles
+
+Objective:
+* Ensure all data products apply standardized and reusable data access definitions where appropriate, while allowing product-specific URLs for file-based access.
+
+Instructions:
+
+* The `default` access method is REQUIRED by ODPS 4.1 and must always be present in dataAccess.
+
+* When adding dataAccess to a data product, consider which access methods can be shared vs. product-specific:
+  - **File-based access** (CSV, ZIP, etc.): Requires product-specific URLs - define inline
+  - **API access**: Can be shared if using common API gateway - use $ref to profiles
+  - **MCP/Agent access**: Can be shared if using common MCP server - use $ref to profiles
+
+* **Approach 1 - Single access method (file-based only)**:
+  - Use inline definition with product-specific URL
+
+* **Approach 2 - Single access method (API or Agent only that includes default)**:
+  - Use $ref to reference shared profile from Access/
+
+* **Approach 3 - Mixed access (file + API/Agent)**:
+  - Define `default` inline with product-specific file URL
+  - Reference shared API/Agent profiles using $ref for additional access methods
+  - Mixing inline definitions with $ref is valid and recommended for this scenario
+
+* **Approach 4 - Multiple shared access methods (API + Agent)**:
+  - Name the primary access method as `default` and reference a shared profile
+  - Reference additional shared profiles (like agent) with their own names
+  - This approach satisfies the ODPS requirement for `default` while using shared profiles
+
+Example - Inline only (file access):
+
+dataAccess:
+  default:
+    name:
+      - en: CSV File Download
+    description:
+      - en: Product data in CSV format
+    outputPortType: file
+    format: CSV
+    authenticationMethod: none
+    accessURL: https://example.com/files/product-name.csv
+
+Example - Reference only (shared API):
+
+dataAccess:
+  $ref: "./Access/profiles.yaml#/api"
+
+Example - Mixed (inline file + shared API):
+
+dataAccess:
+  default:
+    name:
+      - en: CSV File Download
+    description:
+      - en: Product data in CSV format
+    outputPortType: file
+    format: CSV
+    authenticationMethod: none
+    accessURL: https://example.com/files/product-name.csv
+  API:
+    $ref: "./Access/profiles.yaml#/api"
+  agent:
+    $ref: "./Access/profiles.yaml#/agent"
+
+Example - Multiple shared profiles (API as default + Agent):
+
+dataAccess:
+  default:
+    $ref: "./Access/profiles.yaml#/api"
+  agent:
+    $ref: "./Access/profiles.yaml#/agent"
+
+Compliance Check:
+
+The $ref must resolve without validation errors against the ODPS 4.1 schema.
