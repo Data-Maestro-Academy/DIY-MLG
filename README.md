@@ -4,7 +4,10 @@ Learn how to build an AI-assisted, GitHub-governed data product governance model
 
 ![DIY Minimum Lovable Governance Cover](cover.png)
 
-Season 1 - Each week adds a new building block:
+## Season 1 - Foundations
+
+Each week adds a new building block:
+
 * E1 – [Setup & Minimal Data Product (Claude + ODPS schema)](https://www.youtube.com/watch?v=h4VXAHImTjQ)
 * E2 – [Product Strategy (value, KPIs, alignment)](https://www.youtube.com/watch?v=FZSu_0OfI_U)
 * E3 – [Data Contracts (internal use and reuse)](https://www.youtube.com/watch?v=ZgO-Kc0rKcE)
