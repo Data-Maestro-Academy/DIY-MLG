@@ -11,7 +11,8 @@ Each week adds a new building block:
 * Week 4 – [Reusable Data Quality Library (base for multiple data products)](https://www.youtube.com/watch?v=16Rl02aFekc)
 * Week 5 – [Reusable SLA Library](https://www.youtube.com/watch?v=dh6bhCQvKzM)
 * Week 6 – [Access Profiles Library](https://www.youtube.com/watch?v=5gkulj5ys_o)
-* Week 7 – Pricing & Licensing Blocks
+* Week 7 – Pricing
+* BONUS: Recap what was done and how to proceed
 
 ## Includes:
 
