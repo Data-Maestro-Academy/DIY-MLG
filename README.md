@@ -6,8 +6,13 @@ Learn how to build an AI-assisted, GitHub-governed data product governance model
 
 ## Season 1 - Foundations
 
-Each week adds a new building block:
+Topics: 
+* Full ODPS 4.1 schema and examples
+* Project rule file for AI behavior guidance
+* VS Code settings for real-time YAML validation
+* Quickbite path for DIY MLG framework (Strategy, Contracts, DQ, SLA, Access, Pricing)
 
+Episodes:
 * E1 – [Setup & Minimal Data Product (Claude + ODPS schema)](https://www.youtube.com/watch?v=h4VXAHImTjQ)
 * E2 – [Product Strategy (value, KPIs, alignment)](https://www.youtube.com/watch?v=FZSu_0OfI_U)
 * E3 – [Data Contracts (internal use and reuse)](https://www.youtube.com/watch?v=ZgO-Kc0rKcE)
@@ -16,14 +21,6 @@ Each week adds a new building block:
 * E6 – [Access Profiles Library](https://www.youtube.com/watch?v=5gkulj5ys_o)
 * E7 – Pricing
 * BONUS: Recap what was done and how to proceed
-
-## Includes:
-
-* Full ODPS 4.1 schema and examples
-* Project rule file for AI behavior guidance
-* VS Code settings for real-time YAML validation
-* Quickbite path for DIY MLG framework (Strategy, Contracts, DQ, SLA, Access, Pricing, Licensing)
-
 
 ## Get Certified in Minimum Lovable Governance
 
