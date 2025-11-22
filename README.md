@@ -4,6 +4,10 @@ Learn how to build an AI-assisted, GitHub-governed data product governance model
 
 ![DIY Minimum Lovable Governance Cover](cover.png)
 
+## Wishlist for future episodes! 
+
+[Raise an issue](https://github.com/Data-Maestro-Academy/DIY-MLG/issues) and define the episode you want to be created. 
+
 ## Season 1 - Foundations
 
 Topics: 
