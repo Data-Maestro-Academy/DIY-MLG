@@ -6,7 +6,7 @@ Learn how to build an AI-assisted, GitHub-governed data product governance model
 
 ## Wishlist for future episodes! 
 
-[Raise an issue](https://github.com/Data-Maestro-Academy/DIY-MLG/issues) and define the episode you want to be created. 
+[Raise an issue](https://github.com/Data-Maestro-Academy/DIY-MLG/issues) and define the episode you want to be created in Season 2. 
 
 ## Season 1 - Foundations
 
@@ -25,6 +25,10 @@ Episodes:
 * E6 – [Access Profiles Library](https://www.youtube.com/watch?v=5gkulj5ys_o)
 * E7 – Pricing
 * BONUS: Recap what was done and how to proceed
+
+## Season 2 - Deeper dive
+
+Episodes based on request defined in Issues.
 
 ## Get Certified in Minimum Lovable Governance
 
