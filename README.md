@@ -4,14 +4,14 @@ Learn how to build an AI-assisted, GitHub-governed data product governance model
 
 ![DIY Minimum Lovable Governance Cover](cover.png)
 
-Each week adds a new building block:
-* Week 1 – [Setup & Minimal Data Product (Claude + ODPS schema)](https://www.youtube.com/watch?v=h4VXAHImTjQ)
-* Week 2 – [Product Strategy (value, KPIs, alignment)](https://www.youtube.com/watch?v=FZSu_0OfI_U)
-* Week 3 – [Data Contracts (internal use and reuse)](https://www.youtube.com/watch?v=ZgO-Kc0rKcE)
-* Week 4 – [Reusable Data Quality Library (base for multiple data products)](https://www.youtube.com/watch?v=16Rl02aFekc)
-* Week 5 – [Reusable SLA Library](https://www.youtube.com/watch?v=dh6bhCQvKzM)
-* Week 6 – [Access Profiles Library](https://www.youtube.com/watch?v=5gkulj5ys_o)
-* Week 7 – Pricing
+Season 1 - Each week adds a new building block:
+* E1 – [Setup & Minimal Data Product (Claude + ODPS schema)](https://www.youtube.com/watch?v=h4VXAHImTjQ)
+* E2 – [Product Strategy (value, KPIs, alignment)](https://www.youtube.com/watch?v=FZSu_0OfI_U)
+* E3 – [Data Contracts (internal use and reuse)](https://www.youtube.com/watch?v=ZgO-Kc0rKcE)
+* E4 – [Reusable Data Quality Library (base for multiple data products)](https://www.youtube.com/watch?v=16Rl02aFekc)
+* E5 – [Reusable SLA Library](https://www.youtube.com/watch?v=dh6bhCQvKzM)
+* E6 – [Access Profiles Library](https://www.youtube.com/watch?v=5gkulj5ys_o)
+* E7 – Pricing
 * BONUS: Recap what was done and how to proceed
 
 ## Includes:
