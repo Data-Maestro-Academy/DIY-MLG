@@ -4,7 +4,7 @@ about: Propose a new episode for DIY Minimum Lovable Governance – Season 2
 title: 'Season 2 Episode Request: <your topic>'
 labels: ''
 assignees: ''
-
+---
 
 ## Episode Title  
 *Replace with the proposed episode title.*
