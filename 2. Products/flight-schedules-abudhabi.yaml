@@ -10,6 +10,15 @@ product:
       type: data-driven service
   dataContract:
     $ref: ./data-contracts/contract-flight-schedules-abudhabi.yml
+  dataQuality:
+    $ref: ./DQ/profiles.yaml#/default
+  SLA:
+    $ref: ./SLA/profiles.yaml#/default
+  dataAccess:
+    default:
+      $ref: ./Access/profiles.yaml#/api
+    agent:
+      $ref: ./Access/profiles.yaml#/agent
 
   productStrategy:
     contributesToKPI:
