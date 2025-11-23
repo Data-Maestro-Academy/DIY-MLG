@@ -194,3 +194,135 @@ dataAccess:
 Compliance Check:
 
 The $ref must resolve without validation errors against the ODPS 4.1 schema.
+
+## 14. Using Pricing Plans
+
+Objective:
+* Ensure all data products with pricing plans properly encapsulate SLA, data quality, and access definitions within each plan tier.
+
+Instructions:
+
+* When adding pricing plans to a data product, ALWAYS define SLA, dataQuality, and access WITHIN each pricing plan, not at the product level.
+
+* If a product has pricingPlans defined, DO NOT include standalone dataQuality, SLA, or dataAccess sections at the product level. These must only exist within the pricing plan definitions.
+
+* By default, create three pricing tiers unless otherwise specified:
+  1. **Freemium** - Free tier for testing/development
+  2. **Premium** - Paid tier for professional use
+  3. **Agent** - AI/MCP access tier for autonomous systems
+
+* Each pricing plan MUST use $ref to reference profiles from the appropriate folders:
+  - SLA profiles: `./SLA/profiles.yaml#/{profile-name}`
+  - Data Quality profiles: `./DQ/profiles.yaml#/{profile-name}`
+  - Access profiles: `./Access/profiles.yaml#/{profile-name}`
+
+* Inline definitions for SLA, dataQuality, or access within pricing plans are NOT allowed.
+
+* Structure pricing plans under `pricingPlans.declarative.en` (or other language codes).
+
+* Each pricing plan should include:
+  - `name`: Plan name
+  - `priceCurrency`: Currency code (e.g., EUR, USD)
+  - `price`: Price as string
+  - `billingDuration`: instant, day, week, month, or year
+  - `unit`: Pricing model (Freemium, Recurring, Pay-per-use, Open-data, etc.)
+  - `maxTransactionQuantity`: API call limit (0 for unlimited)
+  - `offering`: Array of strings describing what's included
+  - `SLA`: $ref to SLA profile
+  - `dataQuality`: $ref to DQ profile
+  - `access`: $ref to access profile
+
+Default Pricing Plan Template:
+
+**Freemium Tier:**
+- Price: 0
+- Unit: Freemium or Open-data
+- Max Transactions: 1,000-10,000/month
+- SLA: default profile
+- DQ: default profile
+- Access: api profile (basic API only)
+
+**Premium Tier:**
+- Price: Market-appropriate (e.g., 99-199 EUR/month)
+- Unit: Recurring
+- Billing: month
+- Max Transactions: 50,000-100,000/month
+- SLA: default or premium profile
+- DQ: default or premium profile
+- Access: api profile
+
+**Agent Tier:**
+- Price: Market-appropriate (e.g., 299-499 EUR/month)
+- Unit: Recurring
+- Billing: month
+- Max Transactions: 200,000-500,000/month
+- SLA: premium profile
+- DQ: premium profile
+- Access: api + agent profiles (both API and MCP access)
+
+Example Structure:
+
+```yaml
+pricingPlans:
+  declarative:
+    en:
+      - name: Freemium Plan
+        priceCurrency: EUR
+        price: "0"
+        billingDuration: month
+        unit: Freemium
+        maxTransactionQuantity: 5000
+        offering:
+          - Basic API access for testing and development
+          - Community support
+          - Daily data updates
+        SLA:
+          $ref: ./SLA/profiles.yaml#/default
+        dataQuality:
+          $ref: ./DQ/profiles.yaml#/default
+        access:
+          $ref: ./Access/profiles.yaml#/api
+
+      - name: Premium Plan
+        priceCurrency: EUR
+        price: "149"
+        billingDuration: month
+        unit: Recurring
+        maxTransactionQuantity: 75000
+        offering:
+          - Full API access
+          - Email support with 24h response time
+          - Hourly data updates
+          - Standard SLA guarantees
+        SLA:
+          $ref: ./SLA/profiles.yaml#/default
+        dataQuality:
+          $ref: ./DQ/profiles.yaml#/premium
+        access:
+          $ref: ./Access/profiles.yaml#/api
+
+      - name: Agent Plan
+        priceCurrency: EUR
+        price: "399"
+        billingDuration: month
+        unit: Recurring
+        maxTransactionQuantity: 400000
+        offering:
+          - Full API and AI Agent (MCP) access
+          - Priority support with 4h response time
+          - Real-time data updates
+          - Premium SLA guarantees
+          - Dedicated account manager
+        SLA:
+          $ref: ./SLA/profiles.yaml#/premium
+        dataQuality:
+          $ref: ./DQ/profiles.yaml#/premium
+        access:
+          $ref: ./Access/profiles.yaml#/agent
+```
+
+Compliance Check:
+
+* All $ref paths must resolve without validation errors against the ODPS 4.1 schema.
+* Products with pricingPlans MUST NOT have standalone dataQuality, SLA, or dataAccess sections.
+* Each pricing plan MUST include SLA, dataQuality, and access references.
