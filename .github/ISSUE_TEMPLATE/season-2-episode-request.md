@@ -5,24 +5,20 @@ title: 'Season 2 Episode Request: <your topic>'
 labels: ''
 assignees: ''
 
----
 
 ## Episode Title  
 *Replace with the proposed episode title.*
 
----
 
 ## Scenario  
 Describe the situation or workflow this episode should cover.  
 What is happening? Who is involved? What is the context?
 
----
 
 ## Governance Outcome  
 What governance result should the episode achieve?  
 (Example: reusable SLA profile, automated DQ check, advanced contract pattern, etc.)
 
----
 
 ## Expected Outputs  
 List the concrete deliverables this episode should produce:
@@ -33,8 +29,6 @@ List the concrete deliverables this episode should produce:
 - Code snippets  
 - Examples  
 - Anything else expected from the episode  
-
----
 
 ## Why It Matters  
 Explain the value of this episode.  
