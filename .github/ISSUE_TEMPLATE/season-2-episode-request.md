@@ -35,7 +35,5 @@ Explain the value of this episode.
 Why is it important for Season 2?  
 How would it help users, teams, or real-world governance workflows?
 
----
-
 ## Additional Notes (Optional)  
 Add references, links, diagrams, or existing files that can help shape this episode.
