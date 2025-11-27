@@ -10,17 +10,73 @@ product:
       type: data-driven service
   dataContract:
     $ref: ./data-contracts/contract-checkpoint-clearance-times.yml
-  dataQuality:
-    $ref: ./DQ/profiles.yaml#/default
-  SLA:
-    $ref: ./SLA/profiles.yaml#/default
-  dataAccess:
-    default:
-      $ref: ./Access/profiles.yaml#/api
-    agent:
-      $ref: ./Access/profiles.yaml#/agent
+
+  pricingPlans:
+    declarative:
+      en:
+        - name: Freemium Plan
+          priceCurrency: EUR
+          price: "0"
+          billingDuration: month
+          unit: Freemium
+          maxTransactionQuantity: 5000
+          offering:
+            - Basic API access for testing and development
+            - Community support
+            - Daily checkpoint clearance time updates
+            - Access to current wait time data
+          SLA:
+            $ref: ./SLA/profiles.yaml#/default
+          dataQuality:
+            $ref: ./DQ/profiles.yaml#/default
+          access:
+            $ref: ./Access/profiles.yaml#/api
+
+        - name: Premium Plan
+          priceCurrency: EUR
+          price: "149"
+          billingDuration: month
+          unit: Recurring
+          maxTransactionQuantity: 75000
+          offering:
+            - Full API access with higher rate limits
+            - Email support with 24h response time
+            - Hourly checkpoint clearance time updates
+            - Historical data access
+            - Standard SLA guarantees
+          SLA:
+            $ref: ./SLA/profiles.yaml#/default
+          dataQuality:
+            $ref: ./DQ/profiles.yaml#/premium
+          access:
+            $ref: ./Access/profiles.yaml#/api
+
+        - name: Agent Plan
+          priceCurrency: EUR
+          price: "399"
+          billingDuration: month
+          unit: Recurring
+          maxTransactionQuantity: 400000
+          offering:
+            - Full API and AI Agent (MCP) access
+            - Priority support with 4h response time
+            - Real-time checkpoint clearance time updates
+            - Historical data and analytics access
+            - Premium SLA guarantees
+            - Dedicated account manager
+            - Custom integration assistance
+          SLA:
+            $ref: ./SLA/profiles.yaml#/premium
+          dataQuality:
+            $ref: ./DQ/profiles.yaml#/premium
+          access:
+            $ref: ./Access/profiles.yaml#/agent
 
   productStrategy:
+    objectives:
+      - en: Improving Passenger Experience in a Major International Airport
+    strategicAlignment:
+      - en: Smart Airport Vision 2030
     contributesToKPI:
       id: csat-001
       name: Customer Satisfaction Score

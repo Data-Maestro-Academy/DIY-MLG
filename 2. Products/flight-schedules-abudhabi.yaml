@@ -10,15 +10,70 @@ product:
       type: data-driven service
   dataContract:
     $ref: ./data-contracts/contract-flight-schedules-abudhabi.yml
-  dataQuality:
-    $ref: ./DQ/profiles.yaml#/default
-  SLA:
-    $ref: ./SLA/profiles.yaml#/default
-  dataAccess:
-    default:
-      $ref: ./Access/profiles.yaml#/api
-    agent:
-      $ref: ./Access/profiles.yaml#/agent
+
+  pricingPlans:
+    declarative:
+      en:
+        - name: Freemium Plan
+          priceCurrency: EUR
+          price: "0"
+          billingDuration: month
+          unit: Freemium
+          maxTransactionQuantity: 5000
+          offering:
+            - Basic API access for testing and development
+            - Community support
+            - Daily flight schedule updates
+            - Access to current and next-day schedules
+          SLA:
+            $ref: ./SLA/profiles.yaml#/default
+          dataQuality:
+            $ref: ./DQ/profiles.yaml#/default
+          access:
+            $ref: ./Access/profiles.yaml#/api
+
+        - name: Premium Plan
+          priceCurrency: EUR
+          price: "199"
+          billingDuration: month
+          unit: Recurring
+          maxTransactionQuantity: 100000
+          offering:
+            - Full API access with higher rate limits
+            - Email support with 24h response time
+            - Hourly flight schedule updates
+            - 7-day schedule forecast access
+            - Flight status change notifications
+            - Standard SLA guarantees
+          SLA:
+            $ref: ./SLA/profiles.yaml#/default
+          dataQuality:
+            $ref: ./DQ/profiles.yaml#/premium
+          access:
+            $ref: ./Access/profiles.yaml#/api
+
+        - name: Agent Plan
+          priceCurrency: EUR
+          price: "499"
+          billingDuration: month
+          unit: Recurring
+          maxTransactionQuantity: 500000
+          offering:
+            - Full API and AI Agent (MCP) access
+            - Priority support with 4h response time
+            - Real-time flight schedule updates
+            - 30-day schedule forecast access
+            - Flight status change webhooks
+            - Historical flight data access
+            - Premium SLA guarantees
+            - Dedicated account manager
+            - Custom integration assistance
+          SLA:
+            $ref: ./SLA/profiles.yaml#/premium
+          dataQuality:
+            $ref: ./DQ/profiles.yaml#/premium
+          access:
+            $ref: ./Access/profiles.yaml#/agent
 
   productStrategy:
     contributesToKPI:
