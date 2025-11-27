@@ -23,7 +23,7 @@ Episodes:
 * E4 – [Reusable Data Quality Library (base for multiple data products)](https://www.youtube.com/watch?v=16Rl02aFekc)
 * E5 – [Reusable SLA Library](https://www.youtube.com/watch?v=dh6bhCQvKzM)
 * E6 – [Access Profiles Library](https://www.youtube.com/watch?v=5gkulj5ys_o)
-* E7 – Pricing
+* E7 – [Pricing plans](https://www.youtube.com/watch?v=mwRJ0LYy7kw)
 * BONUS: Recap what was done and how to proceed
 
 ## Season 2 - Deeper dive
